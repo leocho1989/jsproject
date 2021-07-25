@@ -1,27 +1,26 @@
-# jsproject
+# Olympic games medals
 
 Background
-A 1-2 paragraph description of your project, providing the necessary context for someone unfamiliar with your project to understand what it does.
+Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Olympic games medals information.
+
 
 Functionality & MVPs
-Fill in this template:
 
-In { project name }, users will be able to:
+In Olympic games medals, users will be able to:
 
-{ 4-6 core features or functionalites of your project }
-{ feature }
-{ feature }
-{ feature }
-{ feature }
+1. Users can view medals data in years(specific host country),ranked by total medals won.
+2. Users can view medals data by different countries, with competition details including individual winners and winning score.
+3. Users can view data in different sports categories.
+4. Users can view medal performance for an individual athlete in Olympics.
+
 In addition, this project will include:
 
-{ 2-4 other aspects of your project, including instructions & README }
-{ other aspect of project }
-{ other aspect of project }
-Wireframes
-Draw the layout of your project: the major sections of the game view, the chart and its legend, the game controls and about me links, etc. This doesn't have to be a fully detailed mockup; it can just be labeled boxes showing the layout of your project. See the Sample Proposal for an example.
+An About modal describing the background and rules of the game
+A production README
 
-Wireframe.cc is a great tool for quickly creating wireframes.
+
+Wireframes
+<img src="https://app-leel-pro.s3.us-west-1.amazonaws.com/Homepage.png"/>
 
 Technologies, Libraries, APIs
 What technologies, libraries, and APIs will your project use? If you're building a game, you might use native browser technology like the Canvas API, or you might use a library like three.js. If you're doing data visualization, you might use d3 for rendering charts, and an API to fetch data.
