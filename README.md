@@ -1,6 +1,6 @@
 # Olympic games medals
 
-Background
+* Background
 Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Olympic games medals information.
 
 
@@ -20,25 +20,28 @@ A production README
 
 
 Wireframes
+
 <img src="https://app-leel-pro.s3.us-west-1.amazonaws.com/Homepage.png"/>
 
+1. Top left side shows the title of this project.
+2. Top right drop down menu bar.
+3. Main data content in the center.
+4. My information will be presented at the bottom of the page.
+
 Technologies, Libraries, APIs
-What technologies, libraries, and APIs will your project use? If you're building a game, you might use native browser technology like the Canvas API, or you might use a library like three.js. If you're doing data visualization, you might use d3 for rendering charts, and an API to fetch data.
-
-If you're still deciding between a few different libraries or APIs, you can list the ones you're considering, and the potential benefits and drawbacks of each.
-
-If your project needs a backend (see below), list that here as well.
+1. Using HTML, CSS, Javascipt.
+2. Webpack and Babel to bundle and transpile the source JavaScript code.
+3. Using npm to manage project dependencies.
+4. Using ESPN Medals API to fetch olympics data.
+5. Using D3 library to render data 
 
 Implementation Timeline
-Here you will detail what you hope to get done each day for this project. It serves as a roadmap for the upcoming week. You'll have the following days to work on this project:
+Friday Afternoon & Weekend: Final proposal and setup
+Monday: D3 library study and API data manipulation. 
+Tuesday: Data implemetation and setup
+Wednesday: D3 charts and correctly render data information
+Thursday: Finish implementing data and css
+Friday: Deploy to GitHub pages. Bug fixing.
 
-Friday Afternoon & Weekend
-Monday
-Tuesday
-Wednesday
-Thursday Morning
-It can be quite hard to estimate how long parts of your project might take. Don't worry if you end up straying from this timeline; the goal is to have a plan in place for what you'll do & in what order, and to have a tentative pace.
 
-You should also be aware that presentations will be Thursday afternoon, and deploying your project to GitHub Pages or Heroku will take some time Thursday morning, so don't plan much for that morning.
 
-Bonus Features (Optional)
