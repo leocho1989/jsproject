@@ -1,7 +1,7 @@
 # Olympic games medals
 
-* Background
-Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Olympic games medals information.
+## Background
+* Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Olympic games medals information.
 
 
 Functionality & MVPs
