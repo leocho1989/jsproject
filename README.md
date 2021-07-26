@@ -15,7 +15,7 @@ In Olympic games medals, users will be able to:
 
 In addition, this project will include:
 
-* An About modal describing the background and rules of the game
+* An About modal describing the background
 * A production README
 
 
