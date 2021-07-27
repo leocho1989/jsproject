@@ -1,7 +1,7 @@
 # Olympic games medals
 
 ## Background
-* Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Olympic games medals information.
+* Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Summer Olympic games medals information from 2000 to 2016.
 
 
 ## Functionality & MVPs
@@ -32,7 +32,7 @@ Technologies, Libraries, APIs
 * Using HTML, CSS, Javascipt.
 * Webpack and Babel to bundle and transpile the source JavaScript code.
 * Using npm to manage project dependencies.
-* Using ESPN Medals API to fetch olympics data.
+* Using online Medals csv file to fetch olympics data.
 * Using D3 library to render data 
 
 ## Implementation Timeline
