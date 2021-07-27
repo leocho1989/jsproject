@@ -1,4 +1,4 @@
-# Olympic games medals
+# Olympic games medals information(2000-2016)
 
 ## Background
 * Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Summer Olympic games medals information from 2000 to 2016.
