@@ -6,9 +6,11 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Acme&family=M+PLUS+Rounded+1c&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
   @import url('https://fonts.googleapis.com/css2?family=Acme&family=M+PLUS+Rounded+1c&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .container {
   display: grid;
@@ -51,11 +53,10 @@ display:flex;
     float: right;
     width: 100%;
     border-top: 1px dashed rgb(197, 195, 195);
-    font-family: 'Acme', sans-serif;
-font-family: 'M PLUS Rounded 1c', sans-serif;
+   font-family: 'Lobster', cursive;
 }
 .svgtitle {
-  font-family: 'Acme', sans-serif;
+ font-family: 'Roboto Slab', serif;
 }
 
 .footerbtn {
