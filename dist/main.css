@@ -2,3 +2,209 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 
+  @import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Acme&family=M+PLUS+Rounded+1c&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Acme&family=M+PLUS+Rounded+1c&display=swap');
+
+.container {
+  display: grid;
+  /* grid-template-rows: 45px calc(100vh - 45px);  */
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";  
+}
+
+.header {
+  grid-area: header;
+white-space: nowrap;
+    /* overflow-x: auto; */
+  /* height: 320px; */
+
+  display:flex;
+    align-items:center;
+    justify-content: center;
+    border-bottom: 1px dashed rgb(197, 195, 195);
+    
+    
+}
+
+.content {
+  grid-area: content;
+display:flex;
+    align-items:center;
+    justify-content: center;
+  
+}
+
+.footer {
+  grid-area: footer;
+  font-size:30px;
+  color: rgb(7, 7, 7);
+ display:flex;
+    align-items:center;
+    justify-content: center;
+    float: right;
+    width: 100%;
+    border-top: 1px dashed rgb(197, 195, 195);
+    font-family: 'Acme', sans-serif;
+font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.svgtitle {
+  font-family: 'Acme', sans-serif;
+}
+
+.footerbtn {
+
+  margin-left: 8px;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.rightbtns {
+/*   
+  float: right; */
+  /* margin-top: 30px; */
+  margin-left: 20px;
+
+}
+
+#aboutbtn {
+  background-color: #f89e37;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  display: inline-block;
+  
+}
+
+.banner {
+  /* display: inline-block; */
+  text-align: center;
+  /* margin-left: auto; */
+  /* margin-top: auto; */
+  
+   vertical-align: middle;
+   font-size: 20px;
+   font-family: 'Jost', sans-serif;
+  
+  
+}
+
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.logo{
+  display:flex;
+    align-items:center;
+  /* vertical-align: middle; */
+}
+
+.linkbtn {
+  text-decoration:none;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  margin-left: 40px;
+  font-family: 'Acme', sans-serif;
+font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.svg{
+  vertical-align: top;
+  text-align: center;
+   
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+

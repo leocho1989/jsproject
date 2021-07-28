@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  
+    <title>Olympic games medals Information</title>
+</head>
+<body>
+    <div class="container">
+    
+     <div class="header">
+        <div class="logo"> <img src="./images/olympic1.png" height="200px" width="200px" />
+              <div class="banner">
+        <h1>Olympic Medals Information(2012-2016)</h1>
+        </div>
+            </div>
+          
+    <div class="rightbtns">
+    <div class="dropdown">
+  <button class="dropbtn">Sport</button>
+  <div class="dropdown-content">
+    <a href="#">Sport1</a>
+    <a href="#">Sport2</a>
+    
+  </div>
+  </div>
+
+    <div class="dropdown">
+  <button class="dropbtn">Country</button>
+  
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  </div>
+
+
+  <!-- Trigger/Open The Modal -->
+<button id="aboutbtn">About</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+</div>
+
+</div>
+
+     <div class="content">
+         <div class="svg">
+    <h1 class="svgtitle">2016 Rio All Medals Ranking</h1>
+     <svg width="700" height="500"></svg>
+     </div>
+     <a class="linkbtn" href="#">2012 London</a>
+     
+   <script>
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("aboutbtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+    // Get the modal
+
+
+   
+        d3.text("./data/summer12-16.json").then(function (text) {
+            const obj = JSON.parse(text);
+            console.log(obj);
+            
+            const usa = obj[2016].filter(item=> item["Country"]=== "USA" ).length;
+            const chn = obj[2016].filter(item=> item["Country"]=== "CHN" ).length;
+            const gbr = obj[2016].filter(item=> item["Country"]=== "GBR" ).length;
+            const rus = obj[2016].filter(item=> item["Country"]=== "RUS" ).length;
+            
+             
+       
+            
+
+    var data = [usa,gbr,rus,chn];
+    const name = ["USA", "GBR", "RUS", "CHN"]
+ var margin = 30;//svg 上下左右边距
+
+    var svg = d3.select('svg');
+    var width = svg.attr('width');
+    var height = svg.attr('height');
+
+    //创建分组
+    var g = svg.append('g').attr('transform','translate('+ margin +','+ margin +')');
+
+    //定义 x y 轴比例尺
+    var scaleX = d3.scaleBand()
+        .domain(name)
+        .range([0,width - margin*2]);
+    var scaleY = d3.scaleLinear()
+        .domain([0,d3.max(data)])
+        .range([height - margin*2,0]);
+
+  
+    //绘画 x y  轴
+    var axisX = d3.axisBottom(scaleX)//specify an array here for values
+    var axisY = d3.axisLeft(scaleY);
+    g.append('g').attr('transform','translate(0,'+ (height - margin*2) +')').call(axisX);
+    g.append('g').attr('transform','translate(0,0)').call(axisY);
+
+    // 创建矩形分组
+    var gs = g.selectAll('rect').data(data).enter().append('g');
+
+
+    //绘 柱状图  +  过度效果
+    var rectP = 10;//柱状图间距
+    gs.append('rect')
+        .attr('x',function (d,i) {
+            return scaleX(name[i]) + rectP/2;
+        })
+        .attr('y',function (d,i) {
+            return scaleY(d);
+        })
+        .attr('width',function (d,i) {
+            return scaleX.step() - rectP;
+        })
+        .attr('height',function (d,i) {
+            return height - margin*2 - scaleY(d);
+
+        })
+        .attr('fill','lightblue')
+
+        //添加鼠标划入划出事件
+        .on('mouseover',function () {//鼠标划入矩形事件
+            d3.select(this)//这里的this指向就是当前的矩形
+
+                .transition()
+                .duration(1000)
+                .delay(200)
+                .attr('fill','lightblue');
+        })
+        .on('mouseout',function () {
+            d3.select(this)
+                
+                .transition()
+                .duration(1000)
+                .delay(200)
+                .attr('fill','pink');
+        })
+
+
+
+    //绘 文字  +  过度效果
+
+    gs.append('text')
+        .attr('x',function (d,i) {
+            return scaleX(name[i]) + rectP/2;
+        })
+        .attr('y',function (d,i) {
+//            return scaleY(d);
+            return height - 2*margin; //这里的初始化效果 同上面的矩形初始化效果一样
+        })
+        .attr('dx',function (d,i) {
+            return -2;
+        })
+        .attr('dy',function (d,i) {
+            return 20;
+        })
+        .text(function (d,i) {
+            return d;
+        })
+        .transition()
+        .duration(2000)
+        .delay(function (d,i) {
+            return i*300;//300毫秒
+        })
+        .attr('y',function (d,i) {
+            return scaleY(d);
+        });
+
+        
+         });
+    </script>
+     </div>
+  <div class="footer"><p>Leo Cao</p>
+<div class="footerbtn"><img src="./images/linkedin.png" height="40px" width="40px" ></div>
+<div class="footerbtn"><img src="./images/github.png" height="40px" width="40px" ></div>
+<div class="footerbtn"><img src="./images/v-live.png" height="40px" width="40px" ></div>
+<div class="footerbtn"><img src="./images/email.png" height="40px" width="40px" ></div>
+</div>
+</div>
+</body>
+
+
+
+</html>
