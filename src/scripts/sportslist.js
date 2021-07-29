@@ -13,7 +13,7 @@ ele.onclick = function() {
     d3.select(".medal_color").selectAll("*").remove();
     d3.select("#title").text(sport.toUpperCase() +" MEDALISTS");
      
-    countryObj.reverse().forEach((item,i) => {
+    countryObj.forEach((item,i) => {
          var list = [item["Athlete"], item["Country"], item["Gender"], item["Medal"]];
     	var ul = d3.select('#svg').append('ul');
 
