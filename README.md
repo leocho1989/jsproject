@@ -1,22 +1,22 @@
-# Olympic games medals information(2012-2016)
+# 2016 Rio Olympic games medals information
 
 ## Background
-* Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of Summer Olympic games medals information from 2012 to 2016.
+* Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of 2016 Rio Olympic games medals information.
 
 
 ## Functionality & MVPs
 
 In Olympic games medals, users will be able to:
 
-* Users can view medals data in years(specific host country),ranked by total medals won.
-* Users can view medals data by different countries, with competition details including individual winners and winning score.
-* Users can view data in different sports categories.
-* Users can view medal performance for an individual athlete in Olympics.
+* Users can view medals data,by total medals ranking.
+* Users can choose to view medals data by gold, silver, bronze medals.
+* Users can view medals data by different countries, with all the medalist information.
+* Users can view data in different sports categories and medalists.
 
 In addition, this project will include:
 
-* An About modal describing the background
-* A production README
+* An About modal describing the background.
+* A production README.
 
 
 ## Wireframes
@@ -33,7 +33,7 @@ Technologies, Libraries, APIs
 * Webpack and Babel to bundle and transpile the source JavaScript code.
 * Using npm to manage project dependencies.
 * Using online Medals csv file to fetch olympics data.
-* Using D3 library to render data 
+* Using D3 library to render data. 
 
 ## Implementation Timeline
 * Friday `Afternoon & Weekend: Final proposal and setup.`
