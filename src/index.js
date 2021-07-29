@@ -1,5 +1,5 @@
 
-import './styles/main.css';
+
 import * as d3 from 'd3';
 import Modal from './scripts/modal';
 import chartMaking from './scripts/cubechart';
