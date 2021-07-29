@@ -185,16 +185,15 @@
 }
 
 li {
-  color: red;
+  color: black;
   text-transform: capitalize;
   list-style-type: none;
   display: inline-block;
-  margin-left: 10px;
   font-size: 20px;
-}
-
-ul {
-  align-text: left;
+  width: 230px;
+  text-align: center;
+  margin-left: 30px;
+  border-bottom: 1px dashed gray;
 }
 
 .modal-content {
@@ -227,7 +226,7 @@ ul {
 
 .modal-text {
   font-family: "Libre Baskerville", serif;
-  font-size: 22px;
+  font-size: 18px;
   /* width: 200px; */
 }
 

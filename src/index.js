@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 import Modal from './scripts/modal';
 import chartMaking from './scripts/cubechart';
 import countryList from './scripts/countrylist';
+import sportsList from './scripts/sportslist';
 
 
 
@@ -34,7 +35,7 @@ bronze.onclick = function() {
     d3.select(svg).selectAll("*").remove();
     // d3.select(".medal_color").selectAll("*").remove();
     d3.select("#title").text("Bronze Medals Ranking(Top 15)");
-chartMaking([38,26,21,20,17,15,15,14,10,10,10,9,8,7,7],["USA", "CHN","JPN","RUS","GBR", "GER","CAN","FRA","AUS","KAZ","AZE", "KOR", "ITA", "UZB","DEN"], "hotpink", "lightgreen");
+chartMaking([38,26,21,20,17,15,15,14,10,10,10,9,8,7,7],["USA", "CHN","JPN","RUS","GBR", "GER","CAN","FRA","AUS","KAZ","AZE", "KOR", "ITA", "UZB","DEN"], "brown", "pink");
 
 };
 
@@ -48,6 +49,23 @@ countryList("JPN", "jpn");
 countryList("ITA", "ita");
 countryList("KOR", "kor");
 countryList("GER", "ger");
+countryList("NED", "ned");
+countryList("CAN", "can");
+countryList("BRA", "bra");
+
+sportsList("athletics");
+sportsList("basketball");
+sportsList("football");
+sportsList("volleyball");
+sportsList("archery");
+sportsList("badminton");
+sportsList("boxing");
+sportsList("cycling");
+sportsList("gymnastics");
+sportsList("taekwondo");
+sportsList("tennis");
+sportsList("weightlifting");
+sportsList("wrestling");
 
 
 

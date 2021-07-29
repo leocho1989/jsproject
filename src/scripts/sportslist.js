@@ -1,20 +1,20 @@
-export default (str_upper, str_lower) => {
+export default (sport) => {
     
 
        d3.text("./data/summer16.json").then(function (text) {
             const obj = JSON.parse(text);
             
-            const countryObj = obj[2016].filter(item=> item["Country"]=== str_upper );
+            const countryObj = obj[2016].filter(item=> item["Sport"]=== sport );
 
-            const country = document.getElementById(str_lower);
+            const ele = document.getElementById(sport);
 
-country.onclick = function() {
+ele.onclick = function() {
     d3.select(svg).selectAll("*").remove();
     d3.select(".medal_color").selectAll("*").remove();
-    d3.select("#title").text("TEAM "+ str_upper +" MEDALISTS");
+    d3.select("#title").text(sport.toUpperCase() +" MEDALISTS");
      
     countryObj.forEach((item,i) => {
-         var list = [item["Athlete"], item["Sport"], item["Gender"]];
+         var list = [item["Athlete"], item["Country"], item["Gender"], item["Medal"]];
     	var ul = d3.select('#svg').append('ul');
 
 	ul.selectAll('li')
