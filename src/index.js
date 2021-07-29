@@ -3,19 +3,9 @@ import './styles/main.css';
 import * as d3 from 'd3';
 import Modal from './scripts/modal';
 import chartMaking from './scripts/cubechart';
+import countryList from './scripts/countrylist';
 
 
-    //    d3.text("./data/summer16.json").then(function (text) {
-    //         const obj = JSON.parse(text);
-    //         // console.log(obj);
-            
-    //         const usa = obj[2016].filter(item=> item["Country"]=== "USA" ).length;
-    //         const chn = obj[2016].filter(item=> item["Country"]=== "CHN" ).length;
-    //         const gbr = obj[2016].filter(item=> item["Country"]=== "GBR" ).length;
-    //         const rus = obj[2016].filter(item=> item["Country"]=== "RUS" ).length;
-
-            
-    //     });
 
 chartMaking([121,70,67,56,42,42,41,29,28,22,21,19,19,18,18],["USA", "CHN","GBR", "RUS","GER", "FRA","JPN", "AUS","ITA","CAN","KOR", "NED", "BRA" , "NZL","AZE" ],"lightblue", "pink");
 
@@ -48,14 +38,17 @@ chartMaking([38,26,21,20,17,15,15,14,10,10,10,9,8,7,7],["USA", "CHN","JPN","RUS"
 
 };
 
+countryList("USA", "usa");
+countryList("GBR", "gbr");
+countryList("RUS", "rus");
+countryList("CHN", "chn");
+countryList("FRA", "fra");
+countryList("AUS", "aus");
+countryList("JPN", "jpn");
+countryList("ITA", "ita");
+countryList("KOR", "kor");
+countryList("GER", "ger");
 
 
-const sport1 = document.getElementById("sport1");
 
-sport1.onclick = function() {
-    d3.select(svg).selectAll("*").remove();
-    d3.select(".medal_color").selectAll("*").remove();
-    d3.select("#title").text("new");
-chartMaking([1,2,],["USA", "GBR"]);
 
-};

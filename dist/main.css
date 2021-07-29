@@ -184,6 +184,19 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+li {
+  color: red;
+  text-transform: capitalize;
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+ul {
+  align-text: left;
+}
+
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
