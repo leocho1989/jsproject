@@ -1,6 +1,6 @@
 <a href="https://leo-jsproject.herokuapp.com/" target="_blank">Click HERE to visit live website</a>
 
-# 2016 Rio Olympic games medals information
+# 2016 Rio Olympic games medals information app
 
 ## Background
 * Olympic games is happening in Tokyo at the moment, I am a big volleyball fan and like watching olympic games, especially volleyball. So I want to make a data visualization of 2016 Rio Olympic games medals information.
