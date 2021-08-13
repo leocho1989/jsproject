@@ -55,7 +55,7 @@ export default (data, name, color1, color2) => {
                 .transition()
                 .duration(1000)
                 .delay(200)
-                .attr('fill',color1);
+                .attr('fill',color2);
         })
         .on('mouseout',function () {
             d3.select(this)
@@ -63,7 +63,7 @@ export default (data, name, color1, color2) => {
                 .transition()
                 .duration(1000)
                 .delay(200)
-                .attr('fill',color2);
+                .attr('fill',color1);
         });
 
 
