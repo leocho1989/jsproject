@@ -38,6 +38,7 @@ Technologies, Libraries, APIs
 * Using D3 library to render data. 
 
 ## Implementation Timeline
+
 * Friday `Afternoon & Weekend: Final proposal and setup.`
 * Monday: `D3 library study and API data manipulation.` 
 * Tuesday: `Data implemetation and setup.`
@@ -45,5 +46,36 @@ Technologies, Libraries, APIs
 * Thursday: `Finish implementing data and css.`
 * Friday: `Deploy to GitHub pages. Bug fixing.`
 
+## Code Snippets
 
+* JavaScript(D3 Library used)
+```JavaScript
+export default (data, name, color1, color2) => {
+    
+ let margin = 30;
+ const width = 700;
+    const height = 500;
+
+    let svg = d3.select('.svg').append("svg").attr("width", width).attr("height", height);
+
+   
+    let g = svg.append('g').attr('transform','translate('+ margin +','+ margin +')');
+
+   
+    let scaleX = d3.scaleBand()
+        .domain(name)
+        .range([0,width - margin*2]);
+    let scaleY = d3.scaleLinear()
+        .domain([0,d3.max(data)])
+        .range([height - margin*2,0]);
+
+  
+    let axisX = d3.axisBottom(scaleX);
+    let axisY = d3.axisLeft(scaleY);
+    g.append('g').attr('transform','translate(0,'+ (height - margin*2) +')').call(axisX);
+    g.append('g').attr('transform','translate(0,0)').call(axisY);
+
+   
+    let gs = g.selectAll('rect').data(data).enter().append('g');
+```
 
