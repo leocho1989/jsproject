@@ -72,7 +72,7 @@ export default (data, name, color1, color2) => {
             return scaleX(name[i]) + rectP/2;
         })
         .attr('y',function (d,i) {
-            return height;
+            return height - 2*margin;
         })
         .attr('dx',function (d,i) {
             return -2;
