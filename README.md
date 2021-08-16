@@ -49,6 +49,9 @@ Technologies, Libraries, APIs
 ## Code Snippets
 
 * JavaScript(D3 Library used)
+
+    for this project, I self taught D3 library and used it for making my code easy and complete a lot of cool features.
+    
 ```JavaScript
 export default (data, name, color1, color2) => {
     
